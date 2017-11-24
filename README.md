@@ -1,13 +1,21 @@
-# glyphgrid
+# glyphgrid - Watch my algorithm create a set of "glyphs" related to your input.  
 
-Watch my algorithm as he arranges letters on a canvas. Based on your input, a responsive grid is created. Your words are set in the font Cousine-Regular by Steve Matteson. Font size and grid depend on the number of letters entered. Each single letter is resolved into an object with a variety of moving points. These individual dots are moved in each frame of the animation and draw delicate patterns on the canvas.
+## A javascript program for fun
+This webapp was built built for you using the [p5.js](https://p5js.org/) javascript library. 
 
 ![glyphgrid](img/342_glyphs_matthias_jaeger.jpg)
+#### Rendered image: Trying to get the grid right
+
+## 1. User input
+Give the program a word or a sentence and submit your text. After your input a responsive grid is created. that  For this design I used [Cousine](https://fonts.google.com/specimen/Cousine?selection.family=Cousine) a beautiful sans serif by Steve Matteson. Font size and grid depend on the number of letters entered. Each single letter is resolved into an object with a variety of moving points. These individual dots are moved in each frame of the animation and draw delicate patterns on the canvas.
+
+
+
 
 # Dependencies
-This app was built using the [p5.js](https://p5js.org/) javascript library. While building this I was influenced by [Jona Hoier](http://jonahoier.net/) and the teachings of [Daniel Shiffman](http://shiffman.net/) 
 
 # File structure
+A basic index.html  
 
 ## - root
 - index.html
@@ -27,6 +35,7 @@ This app was built using the [p5.js](https://p5js.org/) javascript library. Whil
 - style.css
 
 ![glyphgrid](img/889_glyphs_matthias_jaeger.jpg)
+#### A longer random walk
 
 # To do now
 - [x] Better math for grid.js
