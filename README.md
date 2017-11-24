@@ -5,7 +5,7 @@ Watch my algorithm as he arranges letters on a canvas. Based on your input, a re
 ![glyphgrid](img/342_glyphs_matthias_jaeger.jpg)
 
 # Dependencies
-This app was built using the [p5.js](https://p5js.org/) javascript library.
+This app was built using the [p5.js](https://p5js.org/) javascript library. While building this I was influenced by [Jona Hoier](http://jonahoier.net/) and the teachings of [Daniel Shiffman](http://shiffman.net/) 
 
 # File structure
 
