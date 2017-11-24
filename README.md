@@ -5,9 +5,27 @@ Watch my algorithm as he arranges letters on a canvas. Based on your input, a re
 ![glyphgrid](img/342_glyphs_matthias_jaeger.jpg)
 
 # Dependencies
-p5.js
-p5.dom.js
+This app was built using the [p5.js](https://p5js.org/) javascript library.
 
 # File structure
-index.html
-app.js
+
+## root
+- index.html
+- app.js
+
+## /libraries
+- p5.js
+- p5.dom.js
+- p5.sound.js
+
+
+![glyphgrid](img/889_glyphs_matthias_jaeger.jpg)
+
+# To do now
+- [x] Better math for grid.js
+- [ ] Style modal screen
+- [ ] Add "save image" button
+
+# To do later
+- [ ] Add speech recognition functions to input
+- [ ] Pass all the different google fonts as a pulldown
