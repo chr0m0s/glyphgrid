@@ -68,4 +68,4 @@ function createGrid() {
 ![glyphgrid](img/889_glyphs_matthias_jaeger.jpg)
 
 # View a running example here
-Coming soon
+http://matthias-jaeger.net/glyphgrid/
