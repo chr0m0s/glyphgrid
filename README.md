@@ -25,7 +25,7 @@ This webapp was built built for you, dear reader. I'm using the [p5.js](https://
       - style.css
 
 ## The currend Grid
-```
+```javascript
 // Called afer user input
 function createGrid() {
  
