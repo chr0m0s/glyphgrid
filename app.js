@@ -8,8 +8,8 @@
 // p5.dom.js
 // http://p5js.org/
 
-// @fontface    
-// Cousine Regular by Steve Matteson 
+// @fontface
+// Cousine Regular by Steve Matteson
 // https://fonts.google.com/specimen/Cousine
 
 
@@ -23,7 +23,7 @@ var gameTime = 0;
 var stat, modal, input, button, message, canvas;
 
 // Design Assets
-var font; 
+var font;
 
 // Game Objects
 var glyphs = [];
@@ -32,7 +32,7 @@ var glyphs = [];
 
 // P5 preload
 function preload() {
-  font = loadFont('vendors/Cousine-Regular.ttf');
+  font = loadFont('fonts/Cousine-Regular.ttf');
 }
 
 // P5 setup
@@ -50,10 +50,9 @@ function draw() {
     translate(0, gameTime * 0.1);
     for(var i = 0; i < glyphs.length; i++) {
       glyphs[i].animate();
-    }  
-    gameTime++;  
+    }
+    gameTime++;
   }
 }
 
 // _______________________________________________________________________________________ //
-
