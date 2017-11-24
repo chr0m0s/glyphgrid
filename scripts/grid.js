@@ -1,7 +1,7 @@
 // Grid
 //
 
-// Select html dom elements 
+// Custom function to create a grid of glyphs
 // _______________________________________________________________________________________ //
 
 function createGrid() {
@@ -9,16 +9,16 @@ function createGrid() {
   // empty the array first
   glyphs = [];
 
-  
+
   // handle user input
   var inputString = input.value();
 
   if(inputString.length < 10) {
-    var scl = width/inputString.length; 
+    var scl = width/inputString.length;
   } else {
-    var scl = width/10; 
+    var scl = width/10;
   }
-  
+
 
   var counter = 0;
   for (var y = 0; y < height-scl; y+=scl) {
@@ -28,12 +28,14 @@ function createGrid() {
       var isLetter = letter.match(/\w/g);
       rect(x,y,scl,scl);
       if(isLetter) {
-        glyphs.push( new Glyph(letter, scl, x, y) ); 
-      } 
+        glyphs.push( new Glyph(letter, scl, x, y) );
+      }
       counter++;
     }
-  } 
+  }
 }
+
+// _______________________________________________________________________________________ //
 
 
 
@@ -41,10 +43,10 @@ function createGrid() {
    var rows = floor( width / scale );
   var cols = floor( height / scale );
 
-    
-    
+
+
     if(counter < elements) {
-      
+
       counter++;
       */
 
@@ -53,7 +55,7 @@ function createGrid() {
 //floor( sqrt( gridarea / elements ) );
 
 /*
-  // create grid 
+  // create grid
   var counter = 0;
   for (var y = 0; y < height-scale; y += scale) {
     for (var x = 0; x < width-scale; x += scale) {
@@ -62,11 +64,11 @@ function createGrid() {
       var isLetter = letter.match(/\w/g);
 
       if (isLetter) {
-        glyphs.push( new Glyph(letter, scale, x, y ) ); 
+        glyphs.push( new Glyph(letter, scale, x, y ) );
       }
 
       // do anyways
-      counter++;       
+      counter++;
     }
   }
 */
@@ -89,11 +91,11 @@ function createGrid() {
       var isLetter = letter.match(/\w/g);
 
       if (isLetter) {
-        glyphs.push( new Glyph(letter, scale, x, y ) ); 
-        glyphs.push( new Glyph(letter, scale, (x + floor(scale * 0.2)), (y + floor(scale * 0.8)) ) ); 
+        glyphs.push( new Glyph(letter, scale, x, y ) );
+        glyphs.push( new Glyph(letter, scale, (x + floor(scale * 0.2)), (y + floor(scale * 0.8)) ) );
       }
       // do anyways
-      counter++;       
+      counter++;
     }
   }
 */

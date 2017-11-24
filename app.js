@@ -13,9 +13,10 @@
 // https://fonts.google.com/specimen/Cousine
 
 
-// Game Control
+// Main Application
 // _______________________________________________________________________________________ //
 
+// Game control
 var startGame = false;
 var gameTime = 0;
 
@@ -28,8 +29,6 @@ var font;
 // Game Objects
 var glyphs = [];
 
-// _______________________________________________________________________________________ //
-
 // P5 preload
 function preload() {
   font = loadFont('fonts/Cousine-Regular.ttf');
@@ -37,21 +36,30 @@ function preload() {
 
 // P5 setup
 function setup() {
-  createInterface();
-  canvas = createCanvas(windowWidth, windowHeight);
-  background(255);
-  stroke(0,0,0,20);
+   // interface.js
+   createInterface();
+   // store canvas
+   canvas = createCanvas(windowWidth, windowHeight);
+   // clear background
+   background(255);
+   // set global stroke style
+   stroke(0,0,0,20);
 }
 
 // P5 draw
 // continous animation loop
 function draw() {
-  if(startGame) {
-    translate(0, gameTime * 0.1);
-    for(var i = 0; i < glyphs.length; i++) {
-      glyphs[i].animate();
-    }
-    gameTime++;
+   // wait for input
+   if(startGame) {
+      // everything is moving
+      translate(0, gameTime * 0.1);
+      // animate glyphs
+      // glyph.js
+      for(var i = 0; i < glyphs.length; i++) {
+         glyphs[i].animate();
+      }
+   // move forward in time
+   gameTime++;
   }
 }
 
