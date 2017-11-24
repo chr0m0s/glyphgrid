@@ -8,17 +8,17 @@ This webapp was built built for you, dear reader. I'm using the [p5.js](https://
 
 
 ## File structure 
-  - index.html          Basic html file
-  - app.js              Setup and draw loop 
+  - index.html
+  - app.js / Setup and draw loop 
   - / scripts       
-    - glyph.js          Constructor function creating a "glyph object"
-    - grid.js           Creating a responsive grid based on user input
-    - interface.js      User Events
-  - / libraries         P5 functions
+    - glyph.js / Constructor function "glyph object"
+    - grid.js / Creating a responsive grid based on user input
+    - interface.js / User Event listeners and actions
+  - / libraries
     - p5.js
     - p5.dom.js
     - p5.sound.js       Not needed yet
-  - / css               Basic styling
+  - / css              
     - style.css
 
 ## The currend Grid
