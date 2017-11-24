@@ -9,15 +9,22 @@ This app was built using the [p5.js](https://p5js.org/) javascript library.
 
 # File structure
 
-## root
+## - root
 - index.html
 - app.js
 
-## /libraries
+## / libraries
 - p5.js
 - p5.dom.js
 - p5.sound.js
 
+## / scripts
+- glyph.js
+- grid.js
+- interface.js
+
+## / css
+- style.css
 
 ![glyphgrid](img/889_glyphs_matthias_jaeger.jpg)
 
