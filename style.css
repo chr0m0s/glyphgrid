@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Cousine');
+
+* {
+  font-family: 'Cousine', monospace;
+  padding: 0; 
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+} 
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 16pt;
+} 
+
+.modal {
+  width: 100%;
+  height: 100%;  
+  padding: 5%;
+}
+
+input {
+  width: 100%;
+  display: block;
+  font-size: 20pt;
+  border-bottom: 2px solid;
+  margin-bottom: 100px;
+  padding: 10px;
+}
+input:hover,
+input:focus {
+  color: red;
+}
+
+button {
+  padding: 10px;
+  font-size: 20pt;
+  border: 2px solid;
+  background: transparent;
+}
+
+button:hover {
+  cursor: pointer;
+  color: red;
+}
+
+canvas {
+  vertical-align: top;
+  position: absolute;
+}
+
+.status {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
