@@ -5,21 +5,21 @@
 ## A javascript program for fun
 This webapp was built built for you, dear reader. I'm using the [p5.js](https://p5js.org/) javascript library to create an animation in the webbrowser. My program renders "glyph objects" in a responsive grid, based on your input and screen. For this design I used [Cousine](https://fonts.google.com/specimen/Cousine?selection.family=Cousine) a beautiful sans serif by Steve Matteson. Font size and grid depend on the number of letters entered. Each single letter is resolved into an object with a variety of moving points. These individual dots are animated in each frame of the animation and draw delicate patterns on the canvas, that can be saved and shared.
 
-## File structure 
 
-- root
-  - index.html
-  - app.js  
-  - / libraries
+
+## File structure 
+  - index.html          Basic html file
+  - app.js              Setup and draw loop 
+  - / scripts       
+    - glyph.js          Constructor function creating a "glyph object"
+    - grid.js           Creating a responsive grid based on user input
+    - interface.js      User Events
+  - / libraries         P5 functions
     - p5.js
     - p5.dom.js
-    - p5.sound.js
-  - / scripts
-    - glyph.js
-    - grid.js
-    - interface.js
-    - / css
-      - style.css
+    - p5.sound.js       Not needed yet
+  - / css               Basic styling
+    - style.css
 
 ## The currend Grid
 ```javascript
