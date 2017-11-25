@@ -61,6 +61,10 @@ function makeGrid() {
             rect(x,y,cellsize,cellsize);
          } 
       }
+   } else {
+    
+      // your code?
+    
    }
 }
 ```
