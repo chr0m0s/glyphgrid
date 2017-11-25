@@ -71,7 +71,6 @@ function makeGrid() {
 
 
 ## Developed a new way of thinking about the grid
-What I would want for this program is that it can calculate an optimized layout related to the available space (width * height) and the given text (input), wich can be any kind of string the user has typed. I would like to calculate a cellsize that best fits these informations. 
 
 ```javascript
 
