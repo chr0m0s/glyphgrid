@@ -70,6 +70,54 @@ function makeGrid() {
 ```
 
 
+## Developed a new way of thinking about the grid
+
+```javascript
+
+function createGrid() {
+  glyphs = [];
+  // handle user input
+  var inputString = input.value();
+  var elements = inputString.length;
+
+  // Tobias Kestels calculations
+  var calculatedX = width;
+  var calculatedY = height;
+  var calculatedElements = calculatedX * calculatedY;
+
+  // counters
+  var t = 0;
+  var c = 1;
+
+  while ( calculatedElements > elements ) {
+    calculatedX = floor( width / c + (width/height));
+    calculatedY = floor( height / c );
+    calculatedElements = calculatedX * calculatedY;
+    c = c + 1;
+  }
+  var xscale = width / calculatedX;
+  var yscale = height / calculatedY;
+
+  // render grid
+  for(var row = 0; row < calculatedY; row++) {
+    for(var col = 0; col < calculatedX; col++) {
+      var ky = row * yscale;
+      var kx = col * xscale;
+      rect( kx, ky, xscale, yscale );
+      text("row: " + row + " col: " + col, col*xscale+ 10, row*yscale + 20 );
+      if(t < inputString.length) {
+        var letter = inputString.charAt(t);
+        var isLetter = letter.match(/\w/g);
+        if(isLetter) {
+          glyphs.push( new Glyph(letter, xscale, kx + (xscale*0.2), ky) );
+        }
+        t++;
+      }
+    }
+  }
+}
+```
+
 # To do
 - [x] Create running example page
 - [ ] Better math for grid.js
