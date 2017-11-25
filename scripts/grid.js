@@ -34,10 +34,11 @@ function createGrid() {
    // render grid
    for(var row = 0; row < calculatedY; row++) {
       for(var col = 0; col < calculatedX; col++) {
-         var ky = row * yscale;
-         var kx = col * xscale;
-         rect( kx, ky, xscale, yscale );
-         text("row: " + row + " col: " + col, col*xscale+ 10, row*yscale + 20 );
+         var x = col * xscale;
+         var y = row * yscale;
+
+         rect( x, y, xscale, yscale );
+
          if(t < inputString.length) {
             var letter = inputString.charAt(t);
             var isLetter = letter.match(/\w/g);
