@@ -18,7 +18,7 @@ function Glyph(_glyph, _xscale, _yscale, _xpos, _ypos) {
 
    // loop all points
    for (var i = 0; i < this.points.length; i++) {
-      var px = this.points[i].x  + _xscale * 0.2;
+      var px = this.points[i].x  + _xscale * 0.1;
       var py = this.points[i].y + _yscale * 0.8;
       this.particles[i] = createVector(px, py);
    }
