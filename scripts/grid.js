@@ -7,48 +7,75 @@
 
 function createGrid() {
 
-   glyphs = [];
+   // check user input
+   var data = input.value();
+   var elements = data.length;
+   console.log(" elements: " + elements );
 
-   // handle user input
-   var inputString = input.value();
-   var elements = inputString.length;
+   // odd elements get even
+   function testNumber(number) {
+      return number % 2 == 0;
+   }
+   if (testNumber(elements)) {
+      console.log(" elements is even ");
+      //elements = elements;
+   } else {
+      console.log(" elements is odd ");
+   }
 
    // kestels calculations
-   var calculatedX = width;
-   var calculatedY = height;
-   var calculatedElements = calculatedX * calculatedY;
-
-   // counters
-   var t = 0;
-   var c = 1;
-
-   while ( calculatedElements > elements ) {
-      calculatedX = floor( width / c);
-      calculatedY = floor( height / c );
-      calculatedElements = calculatedX * calculatedY;
-      c = c + 1;
+   var rows = width;
+   var cols = height;
+   var area = rows * cols;
+   var count = 1;
+   while ( area > elements ) {
+      rows = floor( width / count );
+      cols = floor( height / count );
+      area = floor(rows * cols);
+      count = count + 1;
    }
-   var xscale = width / calculatedX;
-   var yscale = height / calculatedY;
+
+   // finished calculations
+   var cellx = width / rows;
+   var celly = height / cols;
 
    // render grid
-   for(var col = 0; col < calculatedY; col++) {
-      for(var row = 0; row < calculatedX; row++) {
-         var x = row * xscale;
-         var y = col * yscale;
-
-         rect( x, y, xscale, yscale);
-
-         if(t < inputString.length) {
-            var letter = inputString.charAt(t);
+   var cellcount = 0;
+   for(var col = 0; col < cols; col++) {
+      for(var row = 0; row < rows; row++) {
+         var x = row * cellx;
+         var y = col * celly;
+         rect( x, y, cellx, celly);
+         if(cellcount < data.length) {
+            var letter = data.charAt(cellcount);
             var isLetter = letter.match(/\w/g);
             if(isLetter) {
-               glyphs.push( new Glyph(letter, xscale, yscale, x, y) );
+               glyphs.push( new Glyph(letter, cellx, celly, x, y) );
             }
-            t++;
+            cellcount++;
          }
       }
    }
+   console.log(" data: " + data );
+   console.log(" elements: " + elements );
+   console.log(" area: " + area );
+   console.log(" cellcount: " + cellcount );
+   console.log(" rows: " + rows );
+   console.log(" cols: " + cols );
+   console.log(" cellx: " +  cellx );
+   console.log(" celly: " + celly );
 }
 
 // _______________________________________________________________________________________ //
+
+/*
+console.log(" data: " + data );
+console.log(" elements: " + elements );
+console.log(" even number: " + elements % 2 );
+console.log(" area: " + area );
+console.log(" cellcount: " + cellcount );
+console.log(" rows: " + rows );
+console.log(" cols: " + cols );
+console.log(" row: " + row );
+console.log(" col: " + col );
+*/

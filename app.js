@@ -52,7 +52,7 @@ function draw() {
    // wait for input
    if(startGame) {
       // everything is moving
-      translate(0, gameTime * 0.1);
+      //translate(0, gameTime * 0.1);
       // animate glyphs
       // glyph.js
       for(var i = 0; i < glyphs.length; i++) {
