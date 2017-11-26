@@ -2,7 +2,7 @@
 //
 
 // Custom function to create a grid of glyphs
-// Thanks: Tobias Kestel
+// Thanks to Tobias Kestel
 // _______________________________________________________________________________________ //
 
 function createGrid() {
@@ -56,16 +56,9 @@ function createGrid() {
          }
       }
    }
-   console.log(" data: " + data );
-   console.log(" elements: " + elements );
-   console.log(" area: " + area );
-   console.log(" cellcount: " + cellcount );
-   console.log(" rows: " + rows );
-   console.log(" cols: " + cols );
-   console.log(" cellx: " +  cellx );
-   console.log(" celly: " + celly );
 }
 
+// Debug
 // _______________________________________________________________________________________ //
 
 /*
@@ -79,3 +72,5 @@ console.log(" cols: " + cols );
 console.log(" row: " + row );
 console.log(" col: " + col );
 */
+
+// _______________________________________________________________________________________ //
