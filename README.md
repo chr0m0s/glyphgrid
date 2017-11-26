@@ -28,7 +28,8 @@ https://matthias-jaeger-net.github.io/glyphgrid/
 
 # To do
 - [x] Create running example page
-- [ ] Better math for grid.js
+- [x] Better math for grid.js
+- [ ] Make even better math than that?
 - [ ] Style modal screen
 - [ ] Add "save image" button
 - [ ] Add speech recognition functions to input
