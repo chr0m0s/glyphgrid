@@ -1,7 +1,13 @@
-// Interface
-//
+// _______________________________________________________________________________________ //
 
-//  Custom functions to set up the user interaction
+/*
+*  Create user interface and bind input events
+*
+*  @title         interface.js
+*  @author        Matthias Jäger
+*  @dependencies  app.js
+*/
+
 // _______________________________________________________________________________________ //
 
 function createInterface() {
@@ -14,41 +20,27 @@ function createInterface() {
    // store original message
    message = input.value();
 
-   // bind events
-   input.mousePressed(userHasClickedInput);
-   button.mousePressed(userHasConfirmedInput);
+   // bind event listeners
+   input.mousePressed(function(){
+      // empty input
+      //input.value('');
+      button.show();
+   });
+   button.mousePressed(function(){
+      // test the input
+      if(input.value() != '') {
+         modal.hide();
+         startGame = true;
+         createGrid();
+      } else {
+         // error user has clicked button but not given input
+         modal.show();
+         input.value('Try: ' + message);
+      }
+   });
+
+   // show on input focus
    button.hide();
-}
-
-// Handle the user interface events
-// _______________________________________________________________________________________ //
-
-function userHasClickedInput(){
-   // empty input
-   //input.value('');
-   button.show();
-}
-
-function userHasConfirmedInput(){
-   // test input
-   if(input.value() != '') {
-      modal.hide();
-      startGame = true;
-      createGrid();
-   } else {
-      // error user has clicked button but not given input
-      modal.show();
-      input.value('Try: ' + message);
-   }
-}
-
-// P5 key press event
-// _______________________________________________________________________________________ //
-
-function keyPressed() {
-   if(startGame &&  key == ' ') {
-      saveCanvas(canvas, gameTime + "_glyphs_matthias_jaeger", "jpg");
-   }
 }
 
 // _______________________________________________________________________________________ //
