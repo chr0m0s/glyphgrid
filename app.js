@@ -1,6 +1,6 @@
-// _______________________________________________________________________________________ //
-
 /*
+*  glyphGrid
+*
 *  This program creates a poetic type animation.
 *  It arranges user input in an abstract grid on the scren.
 *  Each letter is transformed into a set of moving points,
@@ -14,27 +14,22 @@
 *  @github        https://github.com/matthias-jaeger-net/glyphgrid
 */
 
-// _______________________________________________________________________________________ //
-
 // Game control
 let startGame = false;
 let gameTime = 0;
 
-// UI DOM elements
-let stat, modal, input, button, message, canvas;
-
-// Design assets
-let font;
+// UI elements
+let stat, modal, input, button, message, canvas, font;
 
 // Game objects
 let glyphs = [];
 
-// _______________________________________________________________________________________ //
-
+// runs first
 function preload() {
   font = loadFont('fonts/Cousine-Regular.ttf');
 }
 
+// runs once after preload
 function setup() {
    // scripts/interface.js
    createInterface();
@@ -47,8 +42,8 @@ function setup() {
    noFill();
 }
 
+// runs continously after setup
 function draw() {
-   // wait for input
    if(startGame) {
       // glyph.js
       for(let i = 0; i < glyphs.length; i++) {
@@ -59,10 +54,9 @@ function draw() {
   }
 }
 
+// p5 keyPressed event
 function keyPressed() {
    if(startGame &&  key == ' ') {
       saveCanvas(canvas, gameTime + "_glyphs_matthias_jaeger", "jpg");
    }
 }
-
-// _______________________________________________________________________________________ //

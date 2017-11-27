@@ -1,9 +1,11 @@
-// Grid
-//
-
-// Custom function to create a grid of glyphs
-// Thanks Tobias Kestel
-// _______________________________________________________________________________________ //
+/*
+*  This function creates a grid of rows and colums, related to the proportions the screen
+*  and the number of letters the user has typed.
+*
+*  @title         grid.js
+*  @author        Matthias Jäger, Tobias Kestel
+*  @dependencies  app.js, scripts/glyph.js
+*/
 
 function createGrid() {
 
@@ -45,14 +47,4 @@ function createGrid() {
          }
       }
    }
-
-   console.log("elements: " + elements );
-   console.log("total: " + total );
-   console.log("cellcount: " + cellcount );
-   console.log("rows: " + width /rows );
-   console.log("cols: " + cols );
-   console.log("cellx: " +  cellx );
-   console.log("celly: " + celly );
 }
-
-// _______________________________________________________________________________________ //
