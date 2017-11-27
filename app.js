@@ -1,56 +1,55 @@
-// @title glyphGrid
-// @description creates a poetic, type based animation on html5 canvas
-// @author Matthias Jäger
+// _______________________________________________________________________________________ //
 
-// @libraries
-// http://p5js.org/
+/*
+*  This program creates a poetic type animation.
+*  It arranges user input in an abstract grid on the scren.
+*  Each letter is transformed into a set of moving points,
+*  tracing images on the canvas, that can also be saved.
+*
+*  @title         glyphGrid
+*  @author        Matthias Jäger
+*  @dependencies  scripts/grid.s, scripts/interface.js, scripts/glyph.js
+*  @libraries     http://p5js.org/
+*  @fontface      https://fonts.google.com/specimen/Cousine
+*  @github        https://github.com/matthias-jaeger-net/glyphgrid
+*/
 
-// @fontface Cousine Regular by Steve Matteson
-// https://fonts.google.com/specimen/Cousine
-
-
-// Main Application
 // _______________________________________________________________________________________ //
 
 // Game control
 let startGame = false;
 let gameTime = 0;
 
-// UI DOM Elements
+// UI DOM elements
 let stat, modal, input, button, message, canvas;
 
-// Design Assets
+// Design assets
 let font;
 
-// Game Objects
+// Game objects
 let glyphs = [];
 
-// P5 preload
+// _______________________________________________________________________________________ //
+
 function preload() {
   font = loadFont('fonts/Cousine-Regular.ttf');
 }
 
-// P5 setup
 function setup() {
-   // interface.js
+   // scripts/interface.js
    createInterface();
    // store canvas
    canvas = createCanvas(windowWidth, windowHeight);
    // clear background
-   background(200);
+   background(255);
    // set global stroke style
    stroke(0,0,0,20);
    noFill();
 }
 
-// P5 draw
-// continous animation loop
 function draw() {
    // wait for input
    if(startGame) {
-      // everything is moving
-      //translate(0, gameTime * 0.1);
-      // animate glyphs
       // glyph.js
       for(let i = 0; i < glyphs.length; i++) {
          glyphs[i].animate();
@@ -58,6 +57,12 @@ function draw() {
    // move forward in time
    gameTime++;
   }
+}
+
+function keyPressed() {
+   if(startGame &&  key == ' ') {
+      saveCanvas(canvas, gameTime + "_glyphs_matthias_jaeger", "jpg");
+   }
 }
 
 // _______________________________________________________________________________________ //
