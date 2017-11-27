@@ -1,39 +1,40 @@
 // Glyph
 //
 
-// Constructor Class to create a particle system along the path of a single letter.
-// @params glyph (string), scale (number), xpos (number), ypos(number)
+// Constructor Class to create a particle system along the points of a single letter.
 // _______________________________________________________________________________________ //
 
-function Glyph(_glyph, _xscale, _yscale, _xpos, _ypos) {
+class Glyph {
 
-   // recive a letter
-   this.letter = _glyph;
+   // called on creation
+   constructor(_glyph, _xscale, _yscale, _xpos, _ypos) {
+      // empty list to store particles
+      this.particles = [];
 
-   // get points for the letter
-   this.points = font.textToPoints( _glyph, _xpos, _ypos, _yscale, { sampleFactor: 0.25 });
+      // analyze letter with P5 font
+      this.points = font.textToPoints( _glyph, _xpos, _ypos, _yscale, { sampleFactor: 0.25 });
 
-   // setup praticels
-   this.particles = [];
-
-   // loop all points
-   for (var i = 0; i < this.points.length; i++) {
-      var px = this.points[i].x  + _xscale * 0.1;
-      var py = this.points[i].y + _yscale * 0.8;
-      this.particles[i] = createVector(px, py);
+      // add particles for each point
+      for (let i = 0; i < this.points.length; i++) {
+         // baseline offset
+         let px = this.points[i].x  + _xscale * 0.1;
+         let py = this.points[i].y + _yscale * 0.8;
+         this.particles[i] = createVector(px, py);
+      }
    }
 
-   // loop particles and animate
-   this.animate = function () {
-      for (var i = 0; i < this.particles.length; i++) {
+   // called every frame
+   animate() {
+      // for each of the particles
+      for (let i = 0; i < this.particles.length; i++) {
+         // create a random velocity
          this.vel = p5.Vector.random2D();
+         // add it to the position
          this.particles[i].add(this.vel);
-         noFill();
-         stroke(0,0,0,30);
+         // and draw a single point
          point(this.particles[i].x,this.particles[i].y);
       }
    }
 }
-
 
 // _______________________________________________________________________________________ //

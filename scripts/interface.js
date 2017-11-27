@@ -42,7 +42,6 @@ function userHasConfirmedInput(){
    }
 }
 
-
 // P5 key press event
 // _______________________________________________________________________________________ //
 
@@ -51,3 +50,5 @@ function keyPressed() {
       saveCanvas(canvas, gameTime + "_glyphs_matthias_jaeger", "jpg");
    }
 }
+
+// _______________________________________________________________________________________ //

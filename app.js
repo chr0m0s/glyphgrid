@@ -1,15 +1,11 @@
 // @title glyphGrid
 // @description creates a poetic, type based animation on html5 canvas
 // @author Matthias Jäger
-// @version 0.1
 
 // @libraries
-// p5.js
-// p5.dom.js
 // http://p5js.org/
 
-// @fontface
-// Cousine Regular by Steve Matteson
+// @fontface Cousine Regular by Steve Matteson
 // https://fonts.google.com/specimen/Cousine
 
 
@@ -17,17 +13,17 @@
 // _______________________________________________________________________________________ //
 
 // Game control
-var startGame = false;
-var gameTime = 0;
+let startGame = false;
+let gameTime = 0;
 
 // UI DOM Elements
-var stat, modal, input, button, message, canvas;
+let stat, modal, input, button, message, canvas;
 
 // Design Assets
-var font;
+let font;
 
 // Game Objects
-var glyphs = [];
+let glyphs = [];
 
 // P5 preload
 function preload() {
@@ -41,9 +37,10 @@ function setup() {
    // store canvas
    canvas = createCanvas(windowWidth, windowHeight);
    // clear background
-   background(255);
+   background(200);
    // set global stroke style
    stroke(0,0,0,20);
+   noFill();
 }
 
 // P5 draw
@@ -55,7 +52,7 @@ function draw() {
       //translate(0, gameTime * 0.1);
       // animate glyphs
       // glyph.js
-      for(var i = 0; i < glyphs.length; i++) {
+      for(let i = 0; i < glyphs.length; i++) {
          glyphs[i].animate();
       }
    // move forward in time
