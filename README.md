@@ -5,27 +5,13 @@ I'm using the [p5.js](https://p5js.org/) javascript library to create an animati
 https://matthias-jaeger-net.github.io/glyphgrid/
 
 ![glyphgrid](img/889_glyphs_matthias_jaeger.jpg)
+![glyphgrid](img/702_glyphs_matthias_jaeger.jpg)
+![glyphgrid](img/1691_glyphs_matthias_jaeger.jpg)
 
-
-## File structure
-  - index.html
-  - app.js / Setup and draw loop
-  - / scripts       
-    - glyph.js / Constructor function "glyph object"
-    - grid.js / Creating a responsive grid based on user input
-    - interface.js / User Event listeners and actions
-  - / libraries
-    - p5.js
-    - p5.dom.js
-    - p5.sound.js       Not needed yet
-  - / css              
-    - style.css
-
-# To do
+# Much to do ...
 - [x] Create running example page
 - [x] Better math for grid.js
 - [ ] Make even better math than that?
-- [ ] Style modal screen
+- [ ] Modal screen
 - [ ] Add "save image" button
-- [ ] Add speech recognition functions to input
 - [ ] Pass all the different google fonts as a pulldown
