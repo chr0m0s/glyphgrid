@@ -7,9 +7,9 @@ https://matthias-jaeger-net.github.io/glyphgrid/
 ![glyphgrid](img/889_glyphs_matthias_jaeger.jpg)
 
 
-## File structure 
+## File structure
   - index.html
-  - app.js / Setup and draw loop 
+  - app.js / Setup and draw loop
   - / scripts       
     - glyph.js / Constructor function "glyph object"
     - grid.js / Creating a responsive grid based on user input
