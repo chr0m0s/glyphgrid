@@ -1,5 +1,3 @@
-// _______________________________________________________________________________________ //
-
 /*
 *  This class creates and animates a set of P5.Vector objects
 *  sampled from the points of a given glyph.
@@ -9,8 +7,6 @@
 *  @dependencies  app.js, scripts/grid.js
 *  @parameters    _glyph, _xscale, _yscale, _xpos, _ypos
 */
-
-// _______________________________________________________________________________________ //
 
 class Glyph {
    constructor(_glyph, _xscale, _yscale, _xpos, _ypos) {
@@ -29,7 +25,6 @@ class Glyph {
       }
    }
    animate() {
-      // called every frame
       // for each of the particles
       for (let i = 0; i < this.particles.length; i++) {
 
@@ -44,5 +39,3 @@ class Glyph {
       }
    }
 }
-
-// _______________________________________________________________________________________ //
