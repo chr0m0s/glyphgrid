@@ -30,7 +30,7 @@ class Glyph {
 
          // create a random velocity
          this.vel = p5.Vector.random2D();
-
+         
          // add it to the position
          this.particles[i].add(this.vel);
 
