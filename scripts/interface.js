@@ -19,7 +19,7 @@ function createInterface() {
    // bind event listeners
    input.mousePressed(function(){
       // empty input
-      //input.value('');
+      input.value('');
       button.show();
    });
    button.mousePressed(function(){

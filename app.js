@@ -44,6 +44,7 @@ function setup() {
 
 // runs continously after setup
 function draw() {
+   translate(((width-height)/2),0);
    if(startGame) {
       // glyph.js
       for(let i = 0; i < glyphs.length; i++) {
