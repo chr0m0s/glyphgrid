@@ -7,13 +7,11 @@
 *  @thanks        Tobias Kestel, Maximilian Novak, Christian Pirchheim, Markus Murschitz
 */
 
-function createGrid(userInput) {
-
-   background(255);
+function createGrid(input) {
 
    glyphs = [];
 
-   let res = squarePack(userInput.length, width, height);
+   let res = squarePack(input.length, width, height);
 
    console.log(res);
 
@@ -27,7 +25,7 @@ function createGrid(userInput) {
          let x = col * side;
          let y = row * side;
          rect(x, y, side, side);
-         let letter = userInput.charAt(index);
+         let letter = input.charAt(index);
          let isLetter = letter.match(/\w/g);
          if(isLetter) {
             glyphs.push(new Glyph(letter, res.len, res.len, x, y));
