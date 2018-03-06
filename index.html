@@ -5,20 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
     <title>glyphGrid – A typografic browser experience by Matthias J&auml;ger</title>
-    <script src="libraries/p5.js" type="text/javascript"></script>
-    <script src="libraries/p5.dom.js" type="text/javascript"></script>
-    <script src="libraries/p5.sound.js" type="text/javascript"></script>
-    <script src="scripts/interface.js" type="text/javascript"></script>
-    <script src="scripts/grid.js" type="text/javascript"></script>
-    <script src="scripts/glyph.js" type="text/javascript"></script>
-    <script src="app.js" type="text/javascript"></script>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
       <div class="modal">
-        <input class="input" type="text" value="Click here and write"></input>
-        <button class="button">createGrid</button>
+         <textarea id="input" name="input" value="">Einige Punkte sind aber noch vage</textarea>
+         <button type="button" id="button">create Grid</button>
       </div>
-      <div class="status"></div>
+
+      <script src="libraries/p5.js" type="text/javascript"></script>
+      <script src="libraries/p5.dom.js" type="text/javascript"></script>
+      <script src="libraries/squarepack.js" type="text/javascript"></script>
+
+      <script src="scripts/grid.js" type="text/javascript"></script>
+      <script src="scripts/interface.js" type="text/javascript"></script>
+      <script src="scripts/glyph.js" type="text/javascript"></script>
+
+      <script src="sketch.js" type="text/javascript"></script>
   </body>
 </html>

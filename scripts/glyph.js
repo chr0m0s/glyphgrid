@@ -9,18 +9,19 @@
 */
 
 class Glyph {
-   constructor(_glyph, _xscale, _yscale, _xpos, _ypos) {
+   constructor(letter, cellx, celly, x, y) {
       // empty list to store particles
       this.particles = [];
 
-      // analyze letter with P5 font
-      this.points = font.textToPoints( _glyph, _xpos, _ypos, _yscale, { sampleFactor: 0.25 });
+      // textToPoints() returns an array of vectors
+      // along the path of the given singe letter 
+      this.points = font.textToPoints(letter, 0, 0, celly, { sampleFactor: 0.25 });
 
       // add particles for each point
       for (let i = 0; i < this.points.length; i++) {
          // baseline offset
-         let px = this.points[i].x  + _xscale * 0.1;
-         let py = this.points[i].y + _yscale * 0.8;
+         let px = this.points[i].x  + x + cellx * 0.2; //+ _xscale * 0.3;
+         let py = this.points[i].y + y + celly / 1.2; // + _yscale * 0.8;
          this.particles[i] = createVector(px, py);
       }
    }
@@ -30,7 +31,8 @@ class Glyph {
 
          // create a random velocity
          this.vel = p5.Vector.random2D();
-         
+         this.vel.mult(0.3);
+
          // add it to the position
          this.particles[i].add(this.vel);
 

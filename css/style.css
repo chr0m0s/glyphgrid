@@ -1,59 +1,60 @@
 @import url('https://fonts.googleapis.com/css?family=Cousine');
 
 * {
-  font-family: 'Cousine', monospace;
-  padding: 0; 
-  margin: 0;
-  border: none;
-  outline: none;
-  box-sizing: border-box;
-} 
+   font-family: 'Cousine', monospace;
+   margin: 0;
+   padding: 0;
+   border: none;
+   outline: none;
+   box-sizing: border-box;
+   font-size: 30pt;
+}
 
 html,
 body {
-  width: 100%;
-  height: 100%;
-  font-size: 16pt;
-} 
+   width: 100%;
+   height: 100%;
+}
 
 .modal {
-  width: 100%;
-  height: 100%;  
-  padding: 5%;
+   width: 100%;
+   height: 100%;
+   padding: 20px;
 }
 
 input {
-  width: 100%;
-  display: block;
-  font-size: 20pt;
-  border-bottom: 2px solid;
-  margin-bottom: 100px;
-  padding: 10px;
+   width: 100%;
+   border: 2px solid;
 }
-input:hover,
-input:focus {
-  color: red;
+
+textarea {
+   width: 100%;
+   height: 300px;
+   border: 2px solid;
+   padding: 10px;
 }
 
 button {
-  padding: 10px;
-  font-size: 20pt;
-  border: 2px solid;
-  background: transparent;
+   margin: 20px 0;
+   padding: 10px;
+   font-size: 20pt;
+   border: 2px solid;
+   background: transparent;
 }
 
 button:hover {
-  cursor: pointer;
-  color: red;
+   cursor: pointer;
 }
 
 canvas {
-  vertical-align: top;
-  position: absolute;
+   width: 100%;
+   height: 100%;
+   vertical-align: top;
+   position: absolute;
 }
 
 .status {
-  position: absolute;
-  right: 10px;
-  top: 10px;
+   position: absolute;
+   right: 10px;
+   top: 10px;
 }

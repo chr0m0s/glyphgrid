@@ -4,36 +4,33 @@
 *
 *  @title         grid.js
 *  @author        Matthias Jäger
-*  @thanks        Tobias Kestel, Maximilian Novak
-*  @dependencies  app.js, scripts/glyph.js
-*  @parameters    _glyph, _xscale, _yscale, _xpos, _ypos
+*  @thanks        Tobias Kestel, Maximilian Novak, Christian Pirchheim, Markus Murschitz
 */
 
-function createGrid() {
-   // check user input first
-   let letters = input.value();
-   let rows = cols = ceil(sqrt(letters.length));
-   let scl = height / rows;
-   let cellcount  = 0;
+function createGrid(input) {
 
-   // create grid
-   for(let col = 0; col < cols; col++) {
-      for(let row = 0; row < rows; row++) {
-         // calculate x and y
-         let x = row * scl;
-         let y = col * scl;
+   glyphs = [];
 
-         // check letter
-         let letter = letters.charAt(cellcount);
+   let res = squarePack(input.length, width, height);
 
-         // prevent error
+   console.log(res);
+
+   let side = res.len;
+   let cols = res.col;
+   let rows = res.row;
+
+   let index = 0;
+   for(let row = 0; row < rows; row++) {
+      for(let col = 0; col < cols; col++) {
+         let x = col * side;
+         let y = row * side;
+         rect(x, y, side, side);
+         let letter = input.charAt(index);
          let isLetter = letter.match(/\w/g);
-
-         // add glyphs
          if(isLetter) {
-            glyphs.push( new Glyph(letter, scl, scl, x, y) );
+            glyphs.push(new Glyph(letter, res.len, res.len, x, y));
          }
-         cellcount++;
+         index++;
       }
    }
 }
