@@ -9,13 +9,13 @@
 */
 
 class Glyph {
-   // letter, cellx, celly, x, y
    constructor(letter, cellx, celly, x, y) {
       // empty list to store particles
       this.particles = [];
 
-      // analyze letter with P5 font
-      this.points = font.textToPoints( letter, 0, 0, celly, { sampleFactor: 0.25 });
+      // textToPoints() returns an array of vectors
+      // along the path of the given singe letter 
+      this.points = font.textToPoints(letter, 0, 0, celly, { sampleFactor: 0.25 });
 
       // add particles for each point
       for (let i = 0; i < this.points.length; i++) {

@@ -7,11 +7,12 @@
 */
 
 function createInterface() {
-/*
+
    // Select html dom elements
    modal = select('.modal');
-   input = select('.input');
-   button = select('.button');
+   input = select('#input');
+   button = select('#button');
+
    modal.show();
 
    // store original message
@@ -25,5 +26,4 @@ function createInterface() {
          createGrid(input.value());
       }
    });
-   */
 }

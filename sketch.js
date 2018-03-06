@@ -8,14 +8,10 @@
 *
 *  @title         glyphGrid
 *  @author        Matthias Jäger
-*  @dependencies  scripts/grid.s, scripts/interface.js, scripts/glyph.js
 *  @libraries     http://p5js.org/
 *  @fontface      https://fonts.google.com/specimen/Cousine
 *  @github        https://github.com/matthias-jaeger-net/glyphgrid
 */
-
-// Game control
-let gameTime = 0;
 
 // UI elements
 let stat, modal, input, button, message, canvas, font;
@@ -30,18 +26,10 @@ function preload() {
 // runs once after preload
 function setup() {
    canvas = createCanvas(windowWidth, windowHeight);
-   background(255);
    stroke(0,0,0,10);
-   let userInput = checkUrl(window.location.href);
-   createGrid(userInput);
-}
-
-function checkUrl(string) {
-   let input = '';
-   let search = string.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(a, b, c) {
-      input = c;
-   });
-   return input;
+   createInterface();
+   createGrid(input.value());
+   console.log("setup");
 }
 
 function draw() {
@@ -52,6 +40,6 @@ function draw() {
 
 function keyPressed() {
    if(key == ' ') {
-      saveCanvas(canvas, frameCount + "_glyphs_matthias_jaeger", "jpg");
+      //saveCanvas(canvas, frameCount + "_glyphs_matthias_jaeger", "jpg");
    }
 }
